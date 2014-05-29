@@ -1,0 +1,44 @@
+----item----
+version: 1
+id: {FE313CBF-7D60-43A9-83D4-4C308A5F8A51}
+database: master
+path: /sitecore/templates/Branches/Sugnl
+parent: {BAD98E0E-C1B5-4598-AC13-21B06218B30C}
+name: Sugnl
+master: {00000000-0000-0000-0000-000000000000}
+template: {85ADBF5B-E836-4932-A333-FE0F9FA1ED1E}
+templatekey: Branch Folder
+
+----version----
+language: en
+version: 1
+revision: ff5c7a68-68b3-4d06-a9a8-e8cb7991ee34
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20140408T161944
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+ff5c7a68-68b3-4d06-a9a8-e8cb7991ee34
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20140408T161952:635325707929450416
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

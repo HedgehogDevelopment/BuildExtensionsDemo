@@ -1,0 +1,51 @@
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<UsingTask AssemblyFile="$(MSBuildExtensionsPath)\HedgehogDevelopment\Sim\Hedgehog.Tds.Build.Sim.dll" TaskName="Hedgehog.Tds.Build.Sim.SimInstall"/>
+	<UsingTask AssemblyFile="$(MSBuildExtensionsPath)\HedgehogDevelopment\Sim\Hedgehog.Tds.Build.Sim.dll" TaskName="Hedgehog.Tds.Build.Sim.SimDelete"/>
+	<UsingTask AssemblyFile="$(MSBuildExtensionsPath)\HedgehogDevelopment\Ship\Hedgehog.Build.Ship.dll" TaskName="Hedgehog.Build.Ship.Publish"/>
+	<UsingTask AssemblyFile="$(MSBuildExtensionsPath)\HedgehogDevelopment\Ship\Hedgehog.Build.Ship.dll" TaskName="Hedgehog.Build.Ship.InstallPackage"/>
+	<UsingTask AssemblyFile="$(MSBuildExtensionsPath)\HedgehogDevelopment\Razl\Hedgehog.Build.Razl.dll" TaskName="Hedgehog.Build.Razl.RazlScript"/>
+
+
+	<Target Name="SitecorePreBuild"   >
+
+		<SimDelete  Condition="Exists('$(SitecoreDeployFolder)') and '$(Configuration)' != 'Debug' and '$(Configuration)' != 'Live' "
+			SimPath="D:\Tools\SIM\Hedgehog.Tds.Build.Sim.Console.exe"
+			InstanceName="$(SitecoreWebUrl)"
+			InstanceDirectory="$(SitecoreDeployFolder)"
+			ConnectionString="Data Source=.;User ID=sitecore;Password=password"
+		/>
+		<SimInstall Condition="!Exists('$(SitecoreDeployFolder)') and '$(Configuration)' != 'Live' "
+			SimPath="D:\Tools\SIM\Hedgehog.Tds.Build.Sim.Console.exe"
+			InstanceName="$(SitecoreWebUrl)"
+			InstanceDirectory="$(SitecoreDeployFolder)"
+			RepoDirectory="e:\sitecorerepo"
+			RepoFile="Sitecore 7.1 rev. 130926.zip"
+			ConnectionString="Data Source=.;User ID=sitecore;Password=password"
+			AppPoolIdentity="NetworkService"
+			LicencePath="e:\Sitecore\license.xml"
+		/>
+	</Target>
+	<Target Name="AfterGeneratePackage">
+		<InstallPackage Condition="'$(Configuration)' == 'Live'"
+						HostName="http://live.sugnl.demo.tds"
+						FilePath="$(teamcity_build_workingDir)\Hedgehog\Hedgehog.Master\bin\Package_Live\Hedgehog.Master.update"
+						/>
+		<Publish Condition="'$(Configuration)' == 'Live'"
+				 HostName="http://live.sugnl.demo.tds"
+				 Mode="incremental"
+				 Source="master"
+				 Targets="web"
+				 Languages="en" />
+				 
+	</Target>
+	<Target Name="AfterSitecoreBuild">
+		<RazlScript  Condition="'$(Configuration)' != 'Debug' and '$(Configuration)' != 'Live' "
+					 RazlPath="C:\Program Files (x86)\Hedgehog Development\Razl\Razl.exe"
+					 FilePath="$(teamcity_build_workingDir)\Hedgehog\Deploy\Razl\Staging.xml" 
+					 Parameters="path=$(SitecoreDeployFolder);url=$(SitecoreWebUrl)"/>
+	</Target>
+</Project>
+
+
+
+

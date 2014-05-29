@@ -1,0 +1,23 @@
+<razl>
+	<connection name="Live" readOnly ="true" install="false">
+		<url>http://live.sugnl.demo.tds</url>
+		<accessGuid>757cb84a-04c3-4bac-a95e-d05b7b05eb11</accessGuid>
+		<database>master</database>
+	</connection>
+	<connection name="Staging" readOnly ="false" install="true">
+		<url>$(url)</url>
+		<accessGuid>757cb84a-04c3-4bac-a95e-d05b7b05eb11</accessGuid>
+		<database>master</database>
+		<path>$(path)</path>
+	</connection>
+	<operation name="CopyAll" source="Live" target="Staging">
+		<!--/sitecore/content-->
+		<parameter name="itemId">{0F6AE67A-74C4-4E0F-BC4C-774F01E19AFE}</parameter>
+		<parameter name="overwrite">true</parameter>
+	</operation>
+	<operation name="CopyAll" source="Live" target="Staging">
+		<!--/sitecore/content-->
+		<parameter name="itemId">{15451229-7534-44EF-815D-D93D6170BFCB}</parameter>
+		<parameter name="overwrite">true</parameter>
+	</operation>
+</razl>

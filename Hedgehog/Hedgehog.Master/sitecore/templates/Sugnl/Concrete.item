@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {CC53EDDF-2599-4C5B-BB79-3F3DA89DACD5}
+database: master
+path: /sitecore/templates/Sugnl/Concrete
+parent: {E18DB54E-2E8B-43C2-83EC-8ACBF10D089B}
+name: Concrete
+master: {00000000-0000-0000-0000-000000000000}
+template: {0437FEE2-44C9-46A6-ABE9-28858D9FEE8C}
+templatekey: Template Folder
+
+----version----
+language: en
+version: 1
+revision: d0116233-bca8-47ac-ac0d-4097592ed730
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20140408T112916
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+d0116233-bca8-47ac-ac0d-4097592ed730
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20140408T112921:635325533614480993
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

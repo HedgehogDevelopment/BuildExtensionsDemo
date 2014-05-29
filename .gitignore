@@ -1,0 +1,14 @@
+Hedgehog/Hedgehog.Website/obj
+Hedgehog/Hedgehog.Master/bin
+Hedgehog/Hedgehog.Website/bin
+Hedgehog/Hedgehog.Master/obj/
+Hedgehog/Hedgehog.Master/obj/
+Hedgehog/Hedgehog.Website.Core/obj/
+Hedgehog/Hedgehog.Website.Core/bin/
+
+*.suo
+Hedgehog/Hedgehog.Website.Core/obj/
+Hedgehog/Hedgehog.Master/obj/
+*ncrunch*
+*crunch*
+Hedgehog/libs/Sitecore/
