@@ -16,8 +16,8 @@
 		<parameter name="overwrite">true</parameter>
 	</operation>
 	<operation name="CopyAll" source="Live" target="Staging">
-		<!--/sitecore/content-->
-		<parameter name="itemId">{15451229-7534-44EF-815D-D93D6170BFCB}</parameter>
+		<!--/sitecore/media library/Sugnl-->
+		<parameter name="itemId">{DB1CC848-9A5D-4286-8600-7D533F873EEC}</parameter>
 		<parameter name="overwrite">true</parameter>
 	</operation>
 </razl>

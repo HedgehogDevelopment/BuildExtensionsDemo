@@ -201,7 +201,6 @@ namespace Hedgehog.Website.Core.Models.sitecore.templates.Sugnl.Concrete
 
 
 
-
 namespace Hedgehog.Website.Core.Models.sitecore.templates.Sugnl.Concrete
 {
 
@@ -411,96 +410,6 @@ namespace Hedgehog.Website.Core.Models.sitecore.templates.Sugnl.Interface
 
 
 
-namespace Hedgehog.Website.Core.Models.sitecore.templates.Sugnl.Components
-{
-
-
- 	/// <summary>
-	/// IDelete Interface
-	/// <para></para>
-	/// <para>Path: /sitecore/templates/Sugnl/Components/Delete</para>	
-	/// <para>ID: 5589f391-3682-4c86-8e1d-3d6c25569819</para>	
-	/// </summary>
-	[SitecoreType(TemplateId=IDeleteConstants.TemplateIdString)]
-	public partial interface IDelete : IGlassBase 
-	{
-								/// <summary>
-					/// The Fe field.
-					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
-					/// <para>Field ID: bb77698e-cece-43b8-985d-f532d440b45d</para>
-					/// <para>Custom Data: </para>
-					/// </summary>
-					[SitecoreField(IDeleteConstants.FeFieldName)]
-					string Fe  {get; set;}
-			
-								/// <summary>
-					/// The Te field.
-					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
-					/// <para>Field ID: 161dc781-68ea-4d27-9db6-7c5a1ed1d031</para>
-					/// <para>Custom Data: </para>
-					/// </summary>
-					[SitecoreField(IDeleteConstants.TeFieldName)]
-					string Te  {get; set;}
-			
-				}
-
-
-	public static partial class IDeleteConstants{
-
-			public const string TemplateIdString = "5589f391-3682-4c86-8e1d-3d6c25569819";
-			public static readonly ID TemplateId = new ID(TemplateIdString);
-			public const string TemplateName = "Delete";
-
-					
-			public static readonly ID FeFieldId = new ID("bb77698e-cece-43b8-985d-f532d440b45d");
-			public const string FeFieldName = "Fe";
-			
-					
-			public static readonly ID TeFieldId = new ID("161dc781-68ea-4d27-9db6-7c5a1ed1d031");
-			public const string TeFieldName = "Te";
-			
-			
-
-	}
-
-	
-	/// <summary>
-	/// Delete
-	/// <para></para>
-	/// <para>Path: /sitecore/templates/Sugnl/Components/Delete</para>	
-	/// <para>ID: 5589f391-3682-4c86-8e1d-3d6c25569819</para>	
-	/// </summary>
-	[SitecoreType(TemplateId=IDeleteConstants.TemplateIdString)]
-	public partial class Delete  : GlassBase, IDelete 
-	{
-	   
-						/// <summary>
-				/// The Fe field.
-				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
-				/// <para>Field ID: bb77698e-cece-43b8-985d-f532d440b45d</para>
-				/// <para>Custom Data: </para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IDeleteConstants.FeFieldName)]
-				public virtual string Fe  {get; set;}
-					
-						/// <summary>
-				/// The Te field.
-				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
-				/// <para>Field ID: 161dc781-68ea-4d27-9db6-7c5a1ed1d031</para>
-				/// <para>Custom Data: </para>
-				/// </summary>
-				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
-				[SitecoreField(IDeleteConstants.TeFieldName)]
-				public virtual string Te  {get; set;}
-					
-			
-	}
-}
 
 
 
@@ -726,8 +635,6 @@ namespace Hedgehog.Website.Core.Models.sitecore.templates.Sugnl.Interface
 	}
 
 }
-
-
 
 
 
